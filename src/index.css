@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+}
