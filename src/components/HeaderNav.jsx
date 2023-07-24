@@ -17,7 +17,7 @@ const HeaderNav = () => {
                 <Link to="/">Home</Link>
                 <Link to="/personal">Personal</Link>
                 <Link to="/creative">Creative</Link>
-                <Link to="/weedings">Weddings</Link>
+                <Link to="/weddings">Weddings</Link>
                 <Link>Contact</Link>
                 {auth?.currentUser?.email && (
                   <BiPowerOff className="text-xl cursor-pointer" onClick={() => signOut(auth)} />
