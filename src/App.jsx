@@ -6,6 +6,8 @@ import Layout from './layout/Layout'
 import Wedding from './pages/Wedding'
 import Weddings from './pages/Weddings'
 import Personal from './pages/Personal'
+import CreativePage from './pages/CreativePage'
+import AdminLogin from './pages/AdminLogin'
 
 function App() {
 
@@ -30,8 +32,16 @@ function App() {
           path: "/personal",
           element: <Personal />
         },
-      ]
-    }
+        {
+          path: "/creative",
+          element: <CreativePage />
+        },
+      ],
+    },
+    {
+      path: "/admin-login",
+      element: <AdminLogin />
+    },
   ])
 
   return (

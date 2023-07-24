@@ -3,29 +3,30 @@ import { getDocs, collection } from 'firebase/firestore'
 import { db } from '../firebase/config'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
-const Weddings = () => {
+const CreativePage = () => {
 
-  const [weddings, setWeddings] = useState([])
+  const [creativeData, setCreativeData] = useState([])
 
-  const weddingCollection = collection(db, 'weddings')
+  const creativeCollection = collection(db, 'creative')
 
   useEffect(() => {
-    const getWeddingList = async () => {
+    const getCreativeList = async () => {
       try {
-        const data = await getDocs(weddingCollection)
+        const data = await getDocs(creativeCollection)
         const filteredData = data.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id
         }))
-        setWeddings(filteredData)
+        setCreativeData(filteredData)
       } catch (error) {
         console.log(error)
       }
     }
 
-    getWeddingList()
+    getCreativeList()
   }, [])
 
+  console.log(creativeData)
 
   return (
     <div className='mt-20'>
@@ -34,7 +35,7 @@ const Weddings = () => {
           columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
         >
           <Masonry gutter="12px">
-            {weddings.map((data) => (
+            {creativeData.map((data) => (
               <img src={data.images[0]} />
             ))}
           </Masonry>
@@ -44,4 +45,4 @@ const Weddings = () => {
   )
 }
 
-export default Weddings
+export default CreativePage

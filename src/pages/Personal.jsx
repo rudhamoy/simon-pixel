@@ -1,13 +1,44 @@
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './personal.css'
+import { auth } from '../firebase/config'
 import imag from '../assets/wedding-pics.png'
 import playButton from '../assets/playButton.png'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
+import { collection, getDocs, addDoc } from 'firebase/firestore'
+import { db } from '../firebase/config'
 
 const Personal = () => {
 
-  const [ play, setPlay ] = useState(false)
+  const [play, setPlay] = useState(false)
+
+  const videoRef = useRef(null);
+
+  // useEffect(() => {
+  //   const getPersonalList = async () => {
+  //     try {
+  //       const data = await getDocs(personalCollection)
+  //       const filteredData = data.docs.map((doc) => ({
+  //         ...doc.data(),
+  //         id: doc.id
+  //       }))
+  //     } catch (error) {
+  //       console.log(error)
+  //     }
+  //   }
+
+  //   getPersonalList()
+  // }, [])
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+}, []);
 
   return (
     <div className='mt-20'
@@ -15,12 +46,18 @@ const Personal = () => {
       <div className='rad-grad relative'>
         <div className=' grad' style={{ backgroundImage: `url(${imag})` }}></div>
         <div className="banner--fadeBottom"></div>
-        <img 
-        src={playButton} 
-        className="w-10 absolute top-[50%] left-[50%] cursor-pointer" 
-        // onClick={() => setPlay(true)}  
+        <img
+          src={playButton}
+          className="w-10 absolute top-[50%] left-[50%] cursor-pointer"
+          onClick={() => setPlay(true)}
         />
-        <div className={`absolute ${play ? "left-0 right-0 bottom-0 top-0" : "w-0]"} h-[80vh] bg-white`}></div>
+        <div className={`absolute ${play ? "left-0 right-0 bottom-0 top-0" : "w-0"} h-[80vh] bg-white overflow-hidden`}>
+          <video ref={videoRef} autoPlay loop muted width="100%" height="100%" onClick={() => setPlay(false)} className='cursor-pointer'>
+            <source
+              src="https://player.vimeo.com/external/575741519.sd.mp4?s=4d63f336964baa2da74d77817dab772446ad6c76&profile_id=164&oauth2_token_id=57447761"
+              type="video/mp4" />
+          </video>
+        </div>
       </div>
 
       <div className='mt-10'>

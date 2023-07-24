@@ -16,7 +16,7 @@ const Homepage = () => {
                 >
                     <Masonry gutter="12px">
 
-                        <Link to="/weedings/1" className=" overflow-hidden cursor-pointer relative">
+                        <Link to="/personal" className=" overflow-hidden cursor-pointer relative">
                             <img
                                 src="https://images.pexels.com/photos/14664628/pexels-photo-14664628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                                 alt=""
@@ -27,7 +27,7 @@ const Homepage = () => {
                             </div>
                         </Link>
 
-                        <Link to="/weedings/2" className=" overflow-hidden cursor-pointer relative">
+                        <Link to="/personal" className=" overflow-hidden cursor-pointer relative">
                             <img
                                 src="https://images.unsplash.com/photo-1684318551812-63d888cce300?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
                                 alt=""
@@ -38,7 +38,7 @@ const Homepage = () => {
                             </div>
                         </Link>
 
-                        <Link to="/weedings/3" className=" overflow-hidden cursor-pointer relative">
+                        <Link to="/personal" className=" overflow-hidden cursor-pointer relative">
                             <img
                                 src="https://images.pexels.com/photos/17051611/pexels-photo-17051611/free-photo-of-man-holding-vintage-camera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                                 alt=""
@@ -49,7 +49,7 @@ const Homepage = () => {
                             </div>
                         </Link>
 
-                        <Link to="/weedings/4" className=" overflow-hidden cursor-pointer relative">
+                        <Link to="/personal" className=" overflow-hidden cursor-pointer relative">
                             <img
                                 src="https://images.unsplash.com/photo-1675143741091-db2a4791658c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80"
                                 alt=""
@@ -59,7 +59,7 @@ const Homepage = () => {
                                 <span className='text-2xl uppercase font-semibold'>Image Title</span>
                             </div>
                         </Link>
-                        <Link to="/weedings/5" className=" overflow-hidden cursor-pointer relative">
+                        <Link to="/personal" className=" overflow-hidden cursor-pointer relative">
                             <img
                                 src="https://images.unsplash.com/photo-1643087923902-4b6c52e4a46f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1031&q=80"
                                 alt=""
@@ -69,7 +69,7 @@ const Homepage = () => {
                                 <span className='text-2xl uppercase font-semibold'>Image Title</span>
                             </div>
                         </Link>
-                        <Link to="/weedings/6" className=" overflow-hidden cursor-pointer relative">
+                        <Link to="/personal" className=" overflow-hidden cursor-pointer relative">
                             <img
                                 src="https://images.unsplash.com/photo-1625753891853-bdcedeac190f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
                                 alt=""
